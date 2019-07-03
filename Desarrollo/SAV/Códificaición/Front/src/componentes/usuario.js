@@ -110,6 +110,85 @@ class usuario extends React.Component{
 
     
      render(){
+        return(
+
+            <div class="wrapper pr-1 pl-1">
+            
+            <Menu cursos={this.state.cursos} alumnoid={this.props.params.alumno}></Menu>
+            <div className="container">
+            
+            <Navbar alumnoid={this.props.params.alumno}></Navbar>
+
+            <div className="container">
+            <div className="row">
+            <div className="col-12 p-5">
+                <form onSubmit={this.handleSubmit}>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="inputEmail4">Nombres</label>
+                        <input type="hidden" value={this.props.params.alumno} name="id" onChange={this.handleChange}/>
+                        <input type="text" class="form-control" id="inputEmail4" name="nombres" placeholder="Nombres" onChange={this.handleChange} value={this.state.datos.name} />
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="inputPassword4">Apellido</label>
+                        <input type="text" class="form-control" id="inputPassword4" name="apellidos" placeholder="Apellido" onChange={this.handleChange} value={this.state.datos.surname} />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Direccion</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="dir" onChange={this.handleChange} value={this.state.datos.address}/>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputAddress2">Ciclo</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={this.state.datos.cycle} disabled/>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputAddress2">plan</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={this.state.datos.plan} disabled/>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputAddress2">Promedio</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={this.state.datos.balanced} disabled/>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputAddress2">Estado</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={this.state.datos.situation} disabled/>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Correo Institucional</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={this.state.datos.email} disabled/>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="inputCity">Escuela profesional</label>
+                        <input type="text" class="form-control" id="inputCity" value="Ingenieria de Software" disabled/>
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label for="inputState">Facultad</label>
+                        <input type="text" class="form-control" id="inputZip" value="Ingeniera de Sistemas e Informatica" disabled/>
+
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label for="inputZip">Codigo</label>
+                        <input type="text" class="form-control" id="inputZip" value={this.state.datos.code} disabled/>
+                        </div>
+                    </div>
+                   
+                    {/* <a type="submit"  href={"/home/"+this.props.params.alumno} class="btn btn-primary">Aceptar</a> */}
+                    <button type="submit" class="btn  btn-small color-boton" onClick={this.onClick}>Aceptar</button>
+
+            </form>
+        
+            </div>
+        </div>
+        
+        </div>
+            </div>
+            </div>
+        )
+    }         
 
 }
 export default usuario;
