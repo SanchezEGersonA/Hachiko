@@ -131,6 +131,38 @@ a.article:hover {
     height: 300px;
     
 }
+.menu-color{
+    
+    background-image: linear-gradient(to right,#00A6FF, #025a89);
+    
+   
+    
+}
 
+@media(maz-width:768px){
+	#sidebar{margin-left: -250px;}
+	#sidebar.active{
+		margin-left: 0px;
+	}
+	#sidebarCollapse span{
+		display: none;
+	}
+}
+
+.imagen{
+    width: 250px;
+}
+.icono{
+    font-size: 20px;
+    color: #fff;
+}
+
+.mover{
+    margin-left: 20px;
+}
+
+.fuentes{
+    font-family: 'Lobster Two', cursive;
+}
 
 
