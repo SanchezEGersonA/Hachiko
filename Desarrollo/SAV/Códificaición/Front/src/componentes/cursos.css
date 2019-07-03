@@ -1,0 +1,23 @@
+.fondocurso{
+    background:#f2f2f2;
+    color: black !important ;
+}
+.fuente-tamano{
+    font-size: 15px;
+}
+.iconopdf{
+    font-size: 22px;
+    color: red;
+}
+.iconoArchivo{
+    font-size:20px;
+    color: #00A6FF;
+}
+.iconoSubida{
+    font-size: 25px;
+    margin-right: 4px;
+}
+.color-boton{
+    color: #fff;
+    background:  #00A6FF;
+}
